@@ -18,6 +18,9 @@ app.use("/api/messages", messageRoutes);
 app.get("/port", (req, res) => {
     res.send("Current port is " + PORT);
 });
+app.get("/test", (req, res) => {
+    res.send("Current test is working fine");
+});
 
 
 
