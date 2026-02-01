@@ -15,6 +15,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
+app.get("/port", (req, res) => {
+    res.send("Current port is " + PORT);
+});
+
 
 
 if(process.env.NODE_ENV === 'production'){
